@@ -1,0 +1,201 @@
+* 
+{  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+   box-sizing: border-box;  }
+html { height: 1500px; }
+body  { background-color:whitesmoke; perspective: 1000px; perspective-origin:center center; transform-style:preserve-3d; }
+.father, .container2 
+{
+  box-shadow:5px 5px 5px rgba(222, 184, 135, 0.459),-5px -5px 5px rebeccapurple;
+}
+
+.father
+{ 
+  background-color: rgba(222, 184, 135, 0.459);
+  width:400px;
+  height:400px;
+  margin:10px;
+  font-size:700%;
+  text-align:center;
+  position:relative;
+  left:55.5%;
+  top:129px;
+  display: flex;
+  border-width: 4px 8px 8px 4px;
+  border-color: burlywood;
+  border-style:outset;
+  overflow: hidden;
+  transform:rotate(-50deg);
+}
+.one, .two, .three
+{
+  background-color:whitesmoke;
+  width: 33%;
+  height:100%;
+  position:relative;
+}
+.one
+{  display:flex;
+   flex-direction: column ;
+  padding-right: 5px;
+
+}
+
+.two
+{       
+        margin-left: 5px;
+       padding-top:0px;
+        margin-right: 5px; 
+}
+.container2
+{ position: absolute;
+  top:39.0%; left:18.1%;
+  width:420px;
+  height:360px;
+  display:flex;
+  flex-direction: row;
+  background-color: darkgrey;
+  font-size:550%;
+  font-weight:900;
+  border: 5px solid burlywood;
+  transform:rotate(38deg);
+  
+}
+.secondpart1, .secondpart2, .secondpart3 
+{ line-height:0.05em;
+ width:33.4%;
+ height:100%;
+ padding-left: 60px;
+ padding-top: 0px;
+background-color:whitesmoke;
+}
+div.container2 .secondpart1:hover
+{
+  -webkit-transform:translate(50px,0);
+  transform:translate(70px,0);
+}
+.secondpart1:hover:before
+{
+  content:"hi"; font-size:40px;color:darkgoldenrod; display: block;position: relative;top: 50px;right:130px ;
+}
+.secondpart3 p, .secondpart2 p, .secondpart1 p
+{
+  -webkit-transform:translate(0,-15px);
+  transform:translate(0,-15px);
+}
+.card 
+{
+ width:380px;
+ height:440px;
+ background-color: tomato;
+ position: relative;
+ top: 350px;left:60%;
+}
+.card:hover
+{ transition:all 2s ease-in-out;
+  transform:rotatey(180deg);
+  transform-style: preserve-3d;
+}
+.front 
+{ 
+  width:380px;
+  height:440px;
+  background-color: teal;
+  position:absolute;
+  font-size:25px;  
+ backface-visibility: hidden;
+  z-index: 4;
+}
+.front header
+{ 
+  text-align:center;
+  line-height: 3px;
+}
+.front ul 
+{ 
+ list-style-type: lower-roman; list-style-position: inside;  }
+ .front li 
+ {
+   background-color:yellowgreen; width:80%;  
+ }
+.front li:first-of-type
+{ 
+ transform: rotatex(55deg);
+}
+.front li:nth-of-type(2)
+{
+  transform:translate3d(0px,-30.9px,50px);
+  
+}
+.back
+{ 
+  width:380px;
+  height:440px;
+  position: absolute;
+  background-color: darkred;
+  z-index: 3;
+  transform:rotatey(180deg);
+}
+.newinfo
+{
+  width:380px;
+  height:440px;
+  background:url('femalelion.jfif'),url('good.jfif'),linear-gradient(darkblue 10%,firebrick,green );
+  background-blend-mode:screen,screen;
+  background-size:380px 440px;
+  position: relative;left:200px;top:-90px;
+  box-shadow:5px -5px 10px darkred,-5px 5px 10px darkblue; 
+}
+div.newinfo:hover
+{
+  background:none;padding-top:10%;background:radial-gradient(yellow,green,gray);
+}
+div.newinfo:hover::after
+{
+  content:"hello"; padding-left: 24%; font-size:100px; color:darkgoldenrod;text-shadow:5px 5px 5px darkblue;
+}
+.grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,150px);
+  grid-column-gap:10px;
+  grid-row-gap:10px;
+  /*short hand :: grid-gap: between-Rows between-columns*/
+  
+}
+.child-one, .child-two, .child-three, .child-four, .child-five, .child-six, .child-seven
+{  color:white;
+   background: black;
+   text-align:center;
+   line-height:4cm;
+}
+.child-one
+{
+  grid-column:1/4;
+  background:radial-gradient(black 15%,firebrick);
+  border-top-right-radius:150px;
+  border-top-left-radius: 150px;
+  display:grid;
+  grid-template-columns:25% 50% 25%
+}
+div.child-one > div 
+{ 
+  line-height:2cm;
+}
+.child-two
+{ 
+  grid-row:2/5
+}
+.child-six
+{
+  grid-row: 4 / 5;
+  grid-column: 3 / 4; 
+}
+.child-seven
+{ 
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+}
