@@ -1,0 +1,38 @@
+<div> First Operand <input type="text" id="num1"> </div>
+<div> Second Operand <input type="text" id="num2"> </div>
+<div> Result <input type="text" id="result" disabled> </div>
+<h1 id="outcome"> result Will be displayed here </h1>
+<div> 
+    <input type="submit" value="+" onclick="add()"> 
+    <input type="submit" value="-" onclick="sub()">
+    <input type="submit" value="*" onclick="mult()">
+    <input type="submit" value="/" onclick="div()">
+</div>
+
+<script>
+    n1, n2;
+    function setValues() {
+        n1 = parseInt(document.getElementById("num1").value);
+        n2 = parseInt(document.getElementById("num2").value);
+    }
+    function add() {
+        setValues();
+        document.getElementById("result").value = n1 + n2;
+        document.getElementById("outcome").innerHTML = n1 + n2;
+    }
+    function sub() {
+        setValues();
+        document.getElementById("result").value = n1 - n2;
+        document.getElementById("outcome").innerHTML = n1 - n2;
+    }
+    function mult() {
+        setValues();
+        document.getElementById("result").value = n1 * n2;
+        document.getElementById("outcome").innerHTML = n1 * n2;
+    }
+    function div() {
+        setValues();
+        document.getElementById("result").value = n1 / n2;
+        document.getElementById("outcome").innerHTML = n1 / n2;
+    }
+</script>
