@@ -1,0 +1,96 @@
+<!DOCTYPE haml>
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            @font-face {
+                font-family: 'New Cookie Font';
+                src: url(cookie.regular.ttf);
+            }
+            #registration_form { background-color: whitesmoke; padding: 16px; width: fit-content; margin: auto; }
+            #form_header { font-family: 'New Cookie Font'; font-size: 3em; display: block; width:100%; 
+                text-align: center; font-weight: bolder;  
+            }
+            form, h1 { padding: 16px; }    
+            form label, input.custom_inputs { display: block; }
+            form input.custom_inputs { height: 35px; width: 200px; margin: 10px auto; }    
+            #datePicker, #chooseGender { padding: 4px; margin: 10px; border-width: 1px; border-style: groove; border-color: gray; }
+            form label.radiobutton { text-indent: 10px; margin-top: 5px; }
+            #chkbox { margin-top: 15px; }
+            form .submitbutton { background-color: #0095f6; font-size: medium; }
+            form .submitbutton:hover { border-radius: 10px; font-size: small; }
+            #social_links { padding: 10px; width: fit-content; position: fixed; top: 30%; }
+            #social_links a { display: block; margin-bottom: 20px; }
+            #social_links a:hover { position: relative; bottom:3px;  }            
+            footer { text-align: center; background-color: black; color: burlywood; padding:5px; margin-top: 50px; }
+        </style>
+    </head>
+    <body>
+        <div id="registration_form">        
+            <span id="form_header">BAU Restaurant</span> 
+            <hr>
+            <form method="GET" action="HomePage.html">
+                <input class="custom_inputs" type="text" name="uname" placeholder="Full Name" autofocus>
+                <input class="custom_inputs" type="email" name="uemail" placeholder="Email">
+                <input class="custom_inputs" type="tel" name="utel" placeholder="Mobile Number">
+                <input class="custom_inputs" type="password" name="upass" placeholder="Password">
+                
+                <ul id="datePicker" type="none">
+                    <li style="margin-bottom: 5px;">
+                        <strong style="display: block;"> Birth Date </strong>
+                    </li> 
+                    <li style="display: inline-block; margin: 2px;"> 
+                        <label> Day </label>
+                        <input type="number" name="day" min="1" max="31" step="1">                        
+                    </li>
+                    <li style="display: inline-block; margin: 2px;">
+                        <label> Month </label>
+                        <select name="monthOfBirth">
+                            <option value="JAN">JAN</option>
+                            <option value="FEB">FEB</option>
+                            <option value="MAR">MAR</option>
+                            <option value="APR">APR</option>
+                            <option value="MAY">MAY</option>
+                            <option value="JUN">JUN</option>
+                            <option value="JUL">JUL</option>
+                            <option value="AUG">AUG</option>
+                            <option value="SEP">SEP</option>
+                            <option value="OCT">OCT</option>
+                            <option value="NOV">NOV</option>
+                            <option value="DEC">DEC</option>
+                        </select>                
+                    </li>
+                    <li style="display: inline-block; margin: 2px;"> 
+                        <label> Year </label>   
+                        <input type="number" min="1900" max="2021" step="1">
+                    </li>
+                </ul>
+
+                <div id="chooseGender">
+                    <strong style="display: block;">Gender</strong>
+                        <label class="radiobutton"> <input type="radio" name="gender" value="male"> Male </label>
+                        <label class="radiobutton"> <input type="radio" name="gender" value="female"> Female </label>
+                </div>
+
+                <label id="chkbox"> <input type="checkbox" name="saveUserInfo">I accept Privacy Policy</label>
+                <input class="custom_inputs submitbutton" type="submit" value="Sign up">
+            </form>
+        </div>
+        <div id="social_links">
+            <a href="https://www.instagram.com">
+                <img src="instagram_icon.png" alt="Instagram" width="30px" height="30px">                
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="facebook_icon.png" alt="Facebook" width="30px" height="30px">                
+            </a>
+            <a href="https://twitter.com">
+                <img src="twitter_icon.png" alt="Twitter" width="30px" height="30px">
+            </a>            
+        </div>
+        
+        <footer>
+            <h3> Copyright 2021 <span style="color: antiquewhite; font-size: x-large;">&copy;</span> All Right Reserved </h3>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            #header_container { height: 450px; 
+                background-image: url(header_bottom_bg.png), url(header_right_bg.png), linear-gradient(to bottom left, black, #EEEEEE); 
+                    background-repeat: no-repeat, no-repeat; background-position: bottom left, bottom right; 
+            }
+            header { height: 80px; background-color: white; color: black; border-top: 5px inset greenyellow;
+                border-bottom: 5px inset greenyellow;
+            }
+            header div { float: left; width: 55%; }
+            header div nav { float: left; margin: auto 50px; }
+            header div nav ul { background-color: #EEEEEE; line-height: 2em; padding-inline-start: 0px; display: none; }
+            header div nav h1 { padding: 10px; }
+            header div nav ul li { padding: 10px; margin-bottom: 10px; }
+            header div nav ul li:hover { background-color: greenyellow; }
+            header div nav:hover { background-origin: content-box; }
+            header div nav h1:hover { background-color: green;  }
+            header div nav:hover ul { display: block; }
+            #search_field { height: 50px; display: none; }
+            form:hover img { display: none; }
+            form:hover #search_field { display: block; }
+
+            #menu { background-color: #EEEEEE; width: fit-content; margin: 50px auto; 
+                border: 15px double transparent; border-image: url(pizza_border_design.png) 50 round;
+            }
+            .menu_item { width : 250px; height: 300px; float: left; background-color: white; text-align: center; padding: 10px; 
+                border: 2px dotted darkred; position: relative;
+            }
+            .item_desc { display: inline-block; text-align: left; font-size: small;  color: blue; }
+            .overlap_layer { width: 250px; height: 300px; padding: 10px; position: absolute; top: 0; left: 0;  
+                z-index: -1;  
+            }
+            .overlap_layer span {
+                -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: black; font-size: 50px; color: darkred; 
+                text-shadow: 3px -1px 1px darkblue;
+            }
+            .overlap_layer img { border-radius: 50%; box-shadow: 5px 1px 15px yellowgreen; }
+            .menu_item:hover .overlap_layer { z-index: 0; }            
+            .menu_item:hover h3 { display: none; }
+
+            table { background-color: lightblue; margin: 50px auto; width: 85%; }
+            table caption { background-color: steelblue; color: white; text-align: start; padding: 5px; font-size: x-large; }
+
+        </style>
+    </head>
+    <body>
+        <div id="header_container">
+            <header>
+                <img src="welcoming_guests_img.png" alt="WELCOME" style="float: left;">
+
+                <div>                                    
+                    <nav>
+                            <h1>&downarrow; Pizzas</h1>
+                                <ul type="none">
+                                    <li>Pepperoni</li>
+                                    <li>Dynamite Chicken</li>
+                                    <li>Deluxe</li>
+                                    <li>Steak &amp; Cheese</li>
+                                    <li>Jalapeno Ranchy</li>                                    
+                                    <li>EL Taco Maestro</li>
+                                </ul>                   
+                    </nav>
+                    
+                    <nav>
+                        <h1>&downarrow; Starters</h1>
+                        <ul type="none">
+                            <li>Chicken Kickers</li>
+                            <li>Hot Wings</li>                            
+                            <li>Garlic Twist</li>
+                            <li>Potato Wedges</li>
+                        </ul>
+                    </nav>
+                    
+                    <nav>
+                        <h1>&downarrow; Desserts</h1>
+                        <ul type="none">
+                            <li>Choco Pizza</li>
+                            <li>Apple Pie</li>
+                            <li>Churros</li>
+                            <li>Lava Souffle</li>
+                            <li>Raspberry Cheesecake</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <form style="float: left; margin-top: 5px; padding: 5px; border-left: 2px inset green; border-right: 2px inset green;">
+                    <label style="display:inline-block; margin: 10px auto;">Choose ur lang from the list:</label> <br />
+                    <input list="languages" name="language">
+                    <datalist id="languages">
+                        <option value="Arabic"></option>
+                        <option value="English"></option>
+                        <option value="Japanese"></option>
+                        <option value="Spanish"></option>
+                        <option value="French"></option>                            
+                    </datalist>
+                </form>
+
+                <form style="float: right; margin: 10px;">                                                            
+                    <img src="search_icon.png" alt="Search">
+                    <input id="search_field" type="search" placeholder="Search">
+                </form>
+            </header>
+        </div>
+        
+        <section id="menu">
+            <div>
+                <figure class="menu_item">
+                    <img src="pepperoni_img.png" alt="Pepperoni" width="200px" height="200px">                    
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>Pepperoni
+                            <span class="item_desc">Beef Pepperoni, Mozzarella &amp; Signature Tomato Sauce</span>
+                        </h3>
+                    </figcaption>
+                </figure>
+
+                <figure class="menu_item">
+                    <img src="dynamite_chicken_img.png" alt="Dynamite Chicken" width="200px" height="200px">
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>Dynamite Chicken
+                            <span class="item_desc">Baked Chicken breast, Onion, Green Peppers, Mozzarella Cheese, American cheese, 
+                                Oregano &amp; Dynamite Sauce</span>
+                        </h3>
+                    </figcaption>
+                </figure>
+
+                <figure class="menu_item">
+                    <img src="deluxe_img.png" alt="Deluxe" width="200px" height="200px">
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>Deluxe
+                            <span class="item_desc">Beef Pepperoni, Italian Sausage, Green Peppers, Mushrooms, Onions &amp; 
+                                Mozzarella &amp; Signature Tomato Sauce</span>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <div>
+                <figure class="menu_item">
+                    <img src="steak_cheese_img.png" alt="Steak and Cheese" width="200px" height="200px">
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>Steak &amp; Cheese
+                            <span class="item_desc">Slices of Beef Steak, Onions, Green Peppers, Mushrooms, Mozzarella &amp; 
+                                American cheese.</span>
+                        </h3>
+                    </figcaption>
+                </figure>
+                
+                <figure class="menu_item">
+                    <img src="jalapeno_ranchy_img.png" alt="Jalapeno Ranchy" width="200px" height="200px">
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>Jalapeno Ranchy
+                            <span class="item_desc">Grilled Chicken breast, onions, green peppers, jalapeños &amp; Ranch Sauce.</span>
+                        </h3>
+                    </figcaption>
+                </figure>
+                
+                <figure class="menu_item">
+                    <img src="el_taco_img.png" alt="EL Taco Maestro" width="200px" height="200px">
+                    <div class="overlap_layer"><img src="people_suffering_img.png"><span>Anti Diet</span></div>
+                    <figcaption>
+                        <h3>EL Taco Maestro
+                            <span class="item_desc">
+                                maestro sauce, onion, tomato, green pepper, chicken topping, maestro cheese, &amp; nachos.
+                            </span>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+
+        <table border="1">
+            <caption>DIFFERENT PIZZAs</caption>
+            <thead>
+                <tr>
+                    <th>Pizza Sizes</th>
+                    <th>Diameter Of Pizza</th>
+                    <th>Slices Per Pizza</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Small</td>
+                    <td>10-inch</td>
+                    <td>6 slices</td>
+                </tr>
+                <tr>
+                    <td>Medium</td>
+                    <td>12-inch</td>
+                    <td>8 slices</td>
+                </tr>
+                <tr>
+                    <td>Large</td>
+                    <td>14-inch</td>
+                    <td>10 slices</td>
+                </tr>
+                <tr>
+                    <td>X-large</td>
+                    <td>16-inches</td>
+                    <td>12 slices</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>AVAILABLE OPTIONS</caption>
+            <tbody>
+                <tr>
+                    <td style="width: 50%; border-right: 3px groove #EEEEEE;">
+                        <h3 style="margin: 5px; color: darkblue;">Pizza Crusts (5)</h3>
+                        <ul type="none" style="padding-left: 10px;">
+                            <li>Classic</li>
+                            <li>Cheese Stuffed Crust</li>
+                            <li>Light</li>
+                            <li>Crunchy</li>
+                            <li>Thick</li>
+                        </ul>
+                    </td>
+                    <td style="width: 50%;">
+                        <h3 style="margin: 5px; color: darkblue;">Sauces (4)</h3>
+                        <ul type="none" style="padding-left: 10px; ">
+                            <li>Pesto Sauce</li>
+                            <li>Ranch Sauce</li>
+                            <li>Dynamite Sauce</li>
+                            <li>BBQ Sauce</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="background-color: lightsteelblue;">
+                    <td colspan="2">
+                        <div style="float: left; width: 30%;">
+                            <h3 style="margin: 5px; color: darkblue;">Meats (5)</h3>
+                            <ul type="none" style="padding-left: 10px;">
+                                <li>Pepperoni</li>
+                                <li>Beef</li>
+                                <li>Salami</li>
+                                <li>Anchovies</li>
+                                <li>Italian Sausage</li>
+                                <li>Philly Steak</li>
+                                <li>Premium Chicken</li>
+                            </ul>
+                        </div>                        
+                        <div style="width:60%; float: right;">
+                            <h3 style="margin: 5px; color: darkblue;">Non-Meats (10)</h3>
+                            <ul type="none" style="width: 40%; float: left; padding-left: 10px;">
+                                <li>Green Peppers</li>
+                                <li>Jalapeños</li>
+                                <li>Mozzarella Cheese</li>
+                                <li>Banana Peppers</li>
+                                <li>Diced Tomatoes</li>
+                            </ul>
+                            <ul type="none" style="width: 40%; float: right; padding-left: 10px;">
+                                <li>Mushrooms</li>
+                                <li>Olives</li>
+                                <li>Onions</li>
+                                <li>Oregano</li>
+                                <li>Pineapple</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="width: 85%; margin: 50px auto;">
+            <section style="width: 33%; height: 180px; float: left; background-color: lightskyblue; border-right: 3px groove #EEEEEE;">
+                <h3 style="background-color: #006491; padding: 5px; margin-top: 0px; color: white; font-weight: lighter;">
+                    SCORING DATA
+                </h3>
+                <form style="margin: 10px;">
+                    <label>UserRating: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sub style="color: darkred;">0</sub> 
+                        <input type="range" min="0" value="5" max="10" step=".5"> <sub>10</sub> 
+                    </label>
+                </form>
+                
+                <span style="display: block; margin: 10px;">Dough Taste: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <sub style="color: darkred;">Just OK!</sub> <meter min="0" value="90" max="100"></meter> <sub>Overpowering</sub> 
+                </span>
+                
+                <span style="display: block; margin: 10px;">Overall Quality: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <sub style="color: darkred;">0</sub> <meter min="0" value="2.5" max="5" co></meter> <sub>5</sub>
+                </span>
+            </section>
+
+            <section style="width: 33%; height: 180px;  overflow: auto;  float: left; background-color: lightskyblue; 
+                border-right: 3px groove #EEEEEE;">
+                <h3 style="background-color: #006491; padding: 5px; margin-top: 0px; color: white; font-weight: lighter;">
+                    DISCOVER THE WORLD OF US
+                </h3>
+                <details>
+                    <summary style="margin: 10px;">Branches</summary>
+                    <ul type="none" style="line-height: 2em;">
+                        <li> 
+                            <details> 
+                                <summary style="color: green;">MIDDLE EAST AND AFRICA</summary>
+                                <ul>    
+                                    <li>Palestine</li>
+                                </ul>
+                            </details>                                
+                        </li>
+                        <li> 
+                            <details> <summary style="color: green;"> ASIA PACIFIC </summary>
+                                <ul>
+                                    <li>Pakistan</li>
+                                    <li>Japan</li>
+                                    <li>Thailand</li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li> 
+                            <details> <summary style="color: green;"> EUROPE </summary>
+                                <ul>
+                                    <li>Sweden</li>
+                                    <li>Iceland</li>
+                                    <li>Germany</li>
+                                    <li>Portugal</li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li> 
+                            <details> <summary style="color: green;"> LATIN AMERICA AND CARIBBEAN </summary>
+                                <ul>
+                                    <li>Brazil</li>
+                                    <li>Jamaica</li>
+                                </ul>
+                        </li>
+                        <li> 
+                            <details> <summary style="color: green;"> NORTH AMERICA </summary> 
+                                <ul>
+                                    <li>Mexico</li>
+                                    <li>Canada</li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </section>
+
+            <section style="width: 33%; height: 180px; float: left; background-color: lightskyblue;">
+                <h3 style="background-color: #006491; padding: 5px; margin-top: 0px; color: white; font-weight: lighter;">
+                    ORDER TIMING
+                </h3>
+                <p style="margin: 10px;"> <span style="color: red;">Dear Customer,</span>
+                    the Queue is full and causes an overflow. So Ordering is currently unavailable due to high demand. 
+                    Please select a future ordering time:
+                </p>
+                    <form style="margin: 20px auto; text-align: center;">
+                        <input type="date" name="dateOfOrder"> &nbsp; * &nbsp; <input type="time" name="orderTime">
+                    </form>
+            </section>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <div style="width: 85%; height: 150px; margin: 50px auto;">
+            <h3 style="background-color: #006491; padding: 5px; margin-top: 0px; color: white; font-weight: lighter;">
+                SETTINGS 
+            </h3>
+            <form style="float: left;">
+                <label style="display: block; padding-left: 10px; float: left; margin-right: 150px;"> 
+                    Pick Up a color:  <br /> <br /> <input type="color" name="favColor"> 
+                </label>
+                
+                <textarea name="comments" cols="40" rows="5" placeholder="Enter comments here." style="background-color: beige;"></textarea>
+            </form>
+            <img src="high_protein_img.png" width="80" height="80" style="float: right; -webkit-box-reflect: below 0px;">
+            <img src="trans_fat_free_img.png" width="80" height="80" style="float: right; -webkit-box-reflect: below 0px;">
+            <img src="halal_food_img.png" width="80" height="80" style="float: right; -webkit-box-reflect: left 0px;">
+        </div>
+
+        <footer style="width: 200px; height: 200px; margin: 50px auto -10px auto; background-color: lightskyblue; border-top-left-radius: 50%;
+            border-top-right-radius: 50%; border: 3px groove blanchedalmond;">
+            <nav style="margin-top: 40%;">
+                <ul style="padding-left: 0px; text-align: center; font-size: larger; line-height: 1.5em;">
+                    <li><a href="#header_container">TOP OF PAGE</a></li>
+                    <li><a href="#menu">ANTI REGRET MENU</a></li>
+                    <li><a href="mailto:">MAIL US</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
