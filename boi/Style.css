@@ -1,0 +1,30 @@
+.thing
+{
+ width:120px;
+ height:120px;
+ border-radius:60px;
+ background:linear-gradient(black 5%,brown 90%);
+ position:relative;left:30%;margin-top:10px;
+}
+.thing span
+{
+  display: block;
+  width:8px;
+  height:12px;
+  border-radius: 20px;
+  background-color: black;
+  position: absolute;
+  animation:eyes .7s infinite ease-out alternate-reverse;
+}
+@keyframes eyes 
+{ 
+  0%   { transform: translateX(0px);    }
+  50%  { transform:translateX(1.8px);    }
+  100% { transform:translateX(0px);    }
+}
+@keyframes left-hand-man 
+{ 
+ 0% { transform:rotateZ(0deg);top:-140px;left:47px;   }
+ 50% { transform:rotateZ(35deg);top:-164px;left:55px; }
+ 100% { transform:rotateZ(0deg);top:-140px;left:47px; }
+}
